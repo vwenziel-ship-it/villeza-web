@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ThirtyNiners Milk Tea — Home</title>
+  <meta name="description" content="ThirtyNiners Milk Tea — handcrafted bubble teas, fresh toppings, cozy vibes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #fffaf8;
+      --accent1: #f39c8a; /* coral */
+      --accent2: #f6d365; /* soft yellow */
+      --muted: #6b6b6b;
+      --card: #ffffff;
+      --glass: rgba(255,255,255,0.6);
+      --radius: 14px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background: linear-gradient(180deg, var(--bg) 0%, #fff2ef 100%);
+      color:#222;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding-bottom:48px;
+    }
+    .container{max-width:1100px;margin:0 auto;padding:28px;}
+
+    /* Header */
+    header{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0;
+    }
+    .logo{display:flex;gap:12px;align-items:center}
+    .logo svg{width:48px;height:48px}
+    .brand{font-weight:700;font-size:18px}
+    nav{display:flex;gap:16px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    .cta{background:linear-gradient(90deg,var(--accent1),var(--accent2));padding:10px 14px;border-radius:10px;color:white;text-decoration:none;font-weight:700}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:18px}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4));padding:28px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(45,30,20,0.08)}
+    .eyebrow{color:var(--accent1);font-weight:700;font-size:13px}
+    h1{margin:6px 0 10px;font-size:34px}
+    p.lead{color:#444}
+    .shop-highlights{display:flex;gap:12px;margin-top:18px}
+    .pill{background:var(--card);padding:8px 12px;border-radius:999px;box-shadow:0 6px 18px rgba(40,20,10,0.04);font-weight:600}
+
+    /* Menu grid */
+    .menu{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+    .card{background:var(--card);padding:14px;border-radius:12px;box-shadow:0 6px 18px rgba(20,10,10,0.04);}
+    .card img{width:100%;height:140px;object-fit:cover;border-radius:10px}
+    .card h3{margin:10px 0 6px;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .price{font-weight:700;margin-top:8px}
+
+    /* Side order box */
+    .order-box{background:linear-gradient(180deg,#ffffff, #fff6f4);border-radius:12px;padding:18px;box-shadow:0 10px 30px rgba(60,30,20,0.06)}
+    .order-box label{display:block;font-size:13px;margin-top:8px;color:#333}
+    .order-box select,input[type=number]{width:100%;padding:10px;border-radius:8px;border:1px solid #eee;margin-top:6px}
+    .btn-primary{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#fff;font-weight:700;border:none;cursor:pointer;margin-top:12px}
+
+    /* Footer */
+    footer{margin-top:36px;padding-top:22px;border-top:1px solid rgba(0,0,0,0.04);color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+
+    /* Responsive */
+    @media (max-width:1000px){
+      .hero{grid-template-columns:1fr;}
+      .menu{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:600px){
+      .container{padding:16px}
+      .menu{grid-template-columns:1fr}
+      h1{font-size:26px}
+    }
+
+    /* Tiny helpers */
+    .muted{color:var(--muted)}
+    .center{text-align:center}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0" stop-color="#f39c8a" />
+              <stop offset="1" stop-color="#f6d365" />
+            </linearGradient>
+          </defs>
+          <circle cx="32" cy="28" r="18" fill="url(#g)" />
+          <path d="M20 40c4-6 20-6 24 0v8H20v-8z" fill="#fff" opacity="0.95"/>
+        </svg>
+        <div>
+          <div class="brand">ThirtyNiners Milk Tea</div>
+          <div class="muted" style="font-size:12px;">Handcrafted • Fresh • Cozy</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#order">Order Now</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-card">
+          <div class="eyebrow">New & Featured</div>
+          <h1>Chill with the creamiest milk tea in town</h1>
+
+
+
+          <p class="lead">From classic brown sugar pearls to seasonal fruit blends — handcrafted with premium tea leaves and locally sourced toppings. Cozy seating, friendly staff, and fast takeout.</p>
+
+          <div class="shop-highlights">
+            <div class="pill">Brown Sugar Pearl</div>
+            <div class="pill">Fruit Teas</div>
+            <div class="pill">Vegan Options</div>
+          </div>1
+
+          <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
+            <a href="#menu" class="btn-primary">Explore Menu</a>
+            <a href="#contact" style="text-decoration:none;color:var(--muted);font-weight:700">Find Us →</a>
+          </div>
+
+          <div style="margin-top:18px;font-size:13px;color:var(--muted)">Open daily: <strong>10:00 AM — 9:00 PM</strong></div>
+        </div>
+
+        <aside class="order-box" id="order">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div style="font-weight:800">Quick Order</div>
+            <div style="font-size:12px;color:var(--muted)">Pick up in 15–30 min</div>
+          </div>
+
+          <label for="drink">Choose drink</label>
+          <select id="drink">
+            <option>Brown Sugar Milk Tea</option>
+            <option>Taro Milk Tea</option>
+            <option>Matcha Latte</option>
+            <option>Mango Fruit Tea</option>
+            <option>Wintermelon with Pearl</option>
+          </select>
+
+          <label for="size">Size</label>
+          <select id="size">
+            <option>Regular</option>
+            <option>Large (+₱15)</option>
+          </select>
+
+          <label for="sugar">Sugar</label>
+          <select id="sugar">
+            <option>100%</option>
+            <option>75%</option>
+            <option>50%</option>
+            <option>25%</option>
+            <option>0%</option>
+          </select>
+
+          <label for="toppings">Toppings</label>
+          <select id="toppings">
+            <option>Pearl</option>
+            <option>Cheese Foam (+₱20)</option>
+            <option>Pudding</option>
+            <option>Aloe</option>
+            <option>Extra Ice</option>
+          </select>
+
+          <label for="qty">Quantity</label>
+          <input id="qty" type="number" value="1" min="1">
+
+          <button class="btn-primary" onclick="addToCart()">Add to cart — ₱120</button>
+
+          <div id="cartNotice" style="margin-top:10px;font-size:13px;color:var(--muted)"></div>
+        </aside>
+      </section>
+
+      <section id="menu" style="margin-top:26px">
+        <div style="display:flex;justify-content:space-between;align-items:end">
+          <h2 style="margin:0">Popular Picks</h2>
+          <div class="muted" style="font-size:13px">Updated weekly</div>
+        </div>
+
+        <div class="menu">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1603052875489-3f2a0b8ae3b8?auto=format&fit=crop&w=800&q=60" alt="Brown sugar milk tea">
+            <h3>Brown Sugar Milk Tea</h3>
+            <p class="muted">Creamy milk tea with house-made caramelized pearls.</p>
+            <div class="price">₱120</div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1572449043412-5b4d9a9b5bfb?auto=format&fit=crop&w=800&q=60" alt="Taro milk tea">
+            <h3>Taro Milk Tea</h3>
+            <p class="muted">Silky taro blended with premium milk.</p>
+            <div class="price">₱125</div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1606312619342-8a8a5f3b6f4f?auto=format&fit=crop&w=800&q=60" alt="Mango fruit tea">
+            <h3>Mango Fruit Tea</h3>
+            <p class="muted">Refreshing mango tea, real fruit purée.</p>
+            <div class="price">₱110</div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1604917877930-5afc96f2a0d1?auto=format&fit=crop&w=800&q=60" alt="Matcha latte">
+            <h3>Matcha Latte</h3>
+            <p class="muted">Japanese matcha with frothed milk.</p>
+            <div class="price">₱135</div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1582719478250-65d5d7f4b8c5?auto=format&fit=crop&w=800&q=60" alt="Wintermelon">
+            <h3>Wintermelon with Pearl</h3>
+            <p class="muted">Light wintermelon tea with chewy pearls.</p>
+            <div class="price">₱115</div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1518976024611-488f69a4a9d6?auto=format&fit=crop&w=800&q=60" alt="Cheese foam tea">
+            <h3>Cheese Foam Tea</h3>
+            <p class="muted">Sweet tea topped with salted cheese foam.</p>
+            <div class="price">₱140</div>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" style="margin-top:26px">
+        <div style="display:flex;gap:18px;align-items:center">
+          <div style="flex:1">
+            <h2 style="margin-top:0">About Us</h2>
+            <p class="muted">ThirtyNiners started as a neighborhood stall passionate about making honest, tasty milk tea. We prioritize quality tea leaves, natural syrups, and friendly service. Sustainability matters — we offer compostable cups and discounts for reusable cups.</p>
+            <p style="margin-top:10px"><strong>Address:</strong> </p>
+          </div>
+          <div style="width:260px;">
+            <img src="" alt="cozy shop interior" style="width:100%;border-radius:10px;">
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:26px">
+        <h2>Contact & Hours</h2>
+        <div style="display:flex;gap:18px;flex-wrap:wrap">
+          <div style="min-width:240px;flex:1" class="card">
+            <strong>Hours</strong>
+            <p class="muted" style="margin:6px 0">Mon–Sun: 10:00 AM — 9:00 PM</p>
+            <strong>Phone</strong>
+            <p class="muted" style="margin:6px 0">(+63) 9773375205</p>
+            <strong>Email</strong>
+            <p class="muted" style="margin:6px 0">hello@thirtyniners.ph</p>
+          </div>
+
+          <div style="flex:1;min-width:260px" class="card">
+            <strong>Send a message</strong>
+            <form onsubmit="event.preventDefault();sendMessage()">
+              <label style="display:block;margin-top:8px">Name</label>
+              <input id="name" type="text" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #eee">
+              <label style="display:block;margin-top:8px">Message</label>
+              <textarea id="message" rows="4" style="width:100%;padding:10px;border-radius:8px;border:1px solid #eee"></textarea>
+              <button class="btn-primary" style="margin-top:10px">Send</button>
+            </form>
+            <div id="msgNotice" style="margin-top:8px;font-size:13px;color:var(--muted)"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>© <strong>ThirtyNiners Milk Tea</strong> — Made with love</div>
+      <div class="muted">Follow us on Instagram @thirtyniners</div>
+    </footer>
+  </div>
+
+  <script>
+    function addToCart(){
+      const drink = document.getElementById('drink').value;
+      const qty = document.getElementById('qty').value;
+      const notice = document.getElementById('cartNotice');
+      notice.textContent = qty + ' × ' + drink + ' added to cart. (This is a demo — integrate with your cart system.)';
+      notice.style.color = '#2d6a4f';
+      setTimeout(()=> notice.textContent = '',4000);
+    }
+    function sendMessage(){
+      const name = document.getElementById('name').value || 'Friend';
+      const message = document.getElementById('message').value || '';
+      const notice = document.getElementById('msgNotice');
+      // Demo behaviour
+      notice.textContent = 'Thanks, ' + name + '! We received your message.';
+      notice.style.color = '#2d6a4f';
+      document.getElementById('name').value='';
+      document.getElementById('message').value='';
+      setTimeout(()=> notice.textContent = '', 4000);
+    }
+  </script>
+</body>
+</html>
+
+
